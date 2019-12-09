@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+
+    implementation deps.base.stdlibKt
+    implementation deps.base.koin
+
+    implementation deps.androidx.ktx
+    implementation deps.androidx.design
+
+    implementation deps.rx.relay
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.androidTestRunner
+    androidTestImplementation deps.test.espressoCore
+}
