@@ -36,6 +36,7 @@ abstract class BaseScreen : Fragment() {
     abstract fun ui(): Screen
     abstract fun bindings(): Array<Disposable>
 
+    open fun screenOnStart() {}
     open fun screenOnStop() {}
     open fun onViewLoaded(view: View) {}
 
