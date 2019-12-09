@@ -1,6 +1,5 @@
 package com.pv.pvbase
 
-import android.view.View
 import com.pv.base.BaseScreen
 import com.pv.base.Screen
 import com.pv.base.screen

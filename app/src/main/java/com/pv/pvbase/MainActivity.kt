@@ -10,6 +10,6 @@ class MainActivity : BaseActivity() {
 
     override fun uiBuilder() = ui {
         layout = R.layout.activity_main
-        screen = DemoScreen()
+        screen = MainListScreen()
     }
 }
