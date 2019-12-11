@@ -22,7 +22,7 @@ class MainListScreen : BaseScreen() {
 
         recyclerView = view.findViewById(R.id.rv_main)
         recyclerView.apply {
-            layoutManager = LinearLayoutManager(this.context)
+            layoutManager = LinearLayoutManager(this@MainListScreen.context)
             adapter = mainListAdapter
         }
     }
