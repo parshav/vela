@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cv_main"
-        app:cardCornerRadius="5dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp">
+        android:id="@+id/ll_main_item"
+        app:cardCornerRadius="4dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
 
-    <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView" />
 
-        <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="TextView" />
-
-        <Button
-                android:id="@+id/btn_action"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:text="asd" />
-
-    </RelativeLayout>
+    <Button
+            android:id="@+id/btn_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asd" />
 
 </androidx.cardview.widget.CardView>

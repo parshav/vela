@@ -14,7 +14,7 @@ object CommandItemData {
 
     fun testData(): List<CommandItem> = listOf(
         CommandItem(
-            "test",
+            "asdasdasdasdasdasdasdasdasdasdasd",
             Color.Cyan
         ) {
             log("Test message")

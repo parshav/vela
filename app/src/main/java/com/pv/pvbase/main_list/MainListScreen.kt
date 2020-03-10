@@ -12,6 +12,7 @@ class MainListScreen : BaseScreen() {
 
     private lateinit var recyclerView: RecyclerView
     private val mainListAdapter = MainListAdapter()
+    private val lm = LinearLayoutManager(this.context)
 
     override fun ui() = screen {
         layout = R.layout.screen_main_list
@@ -22,7 +23,7 @@ class MainListScreen : BaseScreen() {
 
         recyclerView = view.findViewById(R.id.rv_main)
         recyclerView.apply {
-            layoutManager = LinearLayoutManager(this@MainListScreen.context)
+            layoutManager = lm
             adapter = mainListAdapter
         }
     }
