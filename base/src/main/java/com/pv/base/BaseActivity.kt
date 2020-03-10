@@ -24,7 +24,7 @@ abstract class BaseActivity : AppCompatActivity() {
         savedInstanceState.onNull {
             supportFragmentManager
                 .beginTransaction()
-                .replace(ui.container ?: R.id.fl_container, ui.screen ?: Fragment())
+                .replace(ui.container ?: R.id.home_container, ui.screen ?: Fragment())
                 .commitNow()
         }
     }

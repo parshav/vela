@@ -11,13 +11,18 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.ui.graphics.toArgb
+import com.pv.base.NavigatorTemplate
 import com.pv.base.log
 import com.pv.pvbase.CommandItemData
 import com.pv.pvbase.R
+import com.pv.pvbase.secondaryscreen.SecondaryScreen
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
-class MainListAdapter : RecyclerView.Adapter<MainListAdapter.ViewHolder>() {
+class MainListAdapter : RecyclerView.Adapter<MainListAdapter.ViewHolder>(), KoinComponent {
 
     private val data = CommandItemData.testData()
+    private val navigatorTemplate: NavigatorTemplate by inject()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -41,6 +46,9 @@ class MainListAdapter : RecyclerView.Adapter<MainListAdapter.ViewHolder>() {
             val data = data[position]
             title.text = data.name
             background.setCardBackgroundColor(data.color.toArgb())
+            action.setOnClickListener {
+                navigatorTemplate.navigateTo(SecondaryScreen())
+            }
         }
     }
 }
